@@ -1,0 +1,102 @@
+ /* }
+    if(cmd === `${prefix}info`){
+        let bicon = bot.user.displayAvatarURL;
+        let botembed = new discord.RichEmbed()
+        .setDescription("Bot Information")
+        .setColor('#FF0000')
+        .setThumbnail(bicon)
+        .addField("Created By <@iCodeLife#0562>")
+        .addField("Created On",bot.user.createdAt);
+        
+        return message.channel.send(botembed);
+    }
+    if(cmd === `${prefix}serverinfo`){
+        let sicon = message.guild.iconURL;
+        let serverembed = new discord.RichEmbed()
+        .setDescription("Server Information :")
+        .setColor('#F1C40F')
+        .setThumbnail(sicon)
+        .addField("Sever Name",message.guild.name)
+        .addField("Created On",message.guild.createdAt)
+        .addField("You Joined On",message.member.joinedAt)
+        .addField("Users",message.guild.memberCount);
+
+        return message.channel.send(serverembed);
+    }
+    if(cmd === `${prefix}pfp`){
+     let uicon = message.author.avatarURL;
+    let usembed = new discord.RichEmbed()
+    .setDescription("User Avatar")
+    .setColor("#293FF3")
+    .setImage(uicon)
+    return message.channel.send(usembed);
+    }  
+   /* if(cmd === `${prefix}report`){
+        //|| message.guild.members.get(args[0]
+        let ruser = message.guild.member(message.mentions.users.first());
+        if(!ruser) return message.channel.send("Couldn't Find The User!");
+        let reason = args.slice(1).join(" ");
+        let reportembed = new discord.RichEmbed()
+
+            .setDescription("Detective Johnnys Crime Reports")
+            .setColor('#f20505')
+            .addField("Reported User",`${ruser} With ID: ${ruser.id}`)
+            .addField("Reported By ",`${message.author} With ID: ${message.author.id}`)
+            .addField("Channel",message.channel)
+            .addField("Time",message.createdAt)
+            .addField("Reason", reason);
+
+        var logchannel = "logs";   
+        let reportschannel = message.guild.channels.find('name',logchannel);
+        if(!reportschannel) return message.guild.channels.find("Couldn't Find The Logs Channel! :(");
+        
+        message.delete().catch(O_o=>{});
+        reportschannel.send(reportembed);
+
+    }
+    if(cmd === `${prefix}kick`){
+        //|| message.guild.members.get(args[0]
+        let kuser = message.guild.member(message.mentions.users.first());
+        if(!kuser) return message.channel.send("Couldn't Find The User!");
+        let kreason = args.slice(1).join(" ");
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Who Is This Non Mod Telling Me To Kick");
+        if(kuser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Lol I Cant Kick Admins And You Know That Right?!");
+        
+        let kickembed = new discord.RichEmbed()
+            .setDescription("Detective Johnnys Kicked This Guy")
+            .setColor('#f20505')
+            .addField("Kicked User",`${ruser} With ID: ${ruser.id}`)
+            .addField("Kicked By ",`${message.author.id} With ID: ${message.author.id}`)
+            .addField("Channel",message.channel)
+            .addField("Time",message.createdAt)
+            .addField("Reason", kreason);
+        
+        let kickchannel = message.guild.channels.find('name',logchannel);
+        if(!kickchannel) return message.guild.channels.find("Couldn't Find The Logs Channel! :(");
+
+        message.guild.member(kuser).kick(kreason);
+        kickchannel.send(kickembed);
+    }
+    if(cmd === `${prefix}ban`){
+        //|| message.guild.members.get(args[0]
+        let buser = message.guild.member(message.mentions.users.first());
+        if(!buser) return message.channel.send("Couldn't Find The User!");
+        let breason = args.slice(1).join(" ");
+        if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Who Is This Non Mod Telling Me To Ban");
+        if(buser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Lol I Cant Ban Admins And You Know That Right?!");
+        
+        let banembed = new discord.RichEmbed()
+            .setDescription("Detective Johnnys Kicked This Guy")
+            .setColor('#f20505')
+            .addField("Banned User",`${ruser} With ID: ${ruser.id}`)
+            .addField("Banned By ",`${message.author.id} With ID: ${message.author.id}`)
+            .addField("Channel",message.channel)
+            .addField("Time",message.createdAt)
+            .addField("Reason", breason);
+        
+        let banchannel = message.guild.channels.find('name',logchannel);
+        if(!banchannel) return message.guild.channels.find("Couldn't Find The Logs Channel! :(");
+        message.guild.member(buser).kick(breason); 
+        banchannel.send(banembed);
+    }
+*/
